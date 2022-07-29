@@ -54,6 +54,7 @@
           <input id='leftPanelButton' type='button' value='<<&nbsp;' onclick='av.ptd.lftPanelBtnFn();'/>
         </div>
         <div id="mainMenu">
+          <!-- Song: Replace Dojo to Non-Dojo -->
           <span data-dojo-type='dijit/MenuBar' tabIndex='0'>
             <span data-dojo-type='dijit/PopupMenuBarItem' label='Avida-ED' iconClass='dijitNoIcon' id='mnAvidaEd'>
               <span data-dojo-type='dijit/Menu'>
@@ -93,7 +94,6 @@
             </span>
             <span data-dojo-type='dijit/PopupMenuBarItem' label='Control' id='mnControl'>
               <span data-dojo-type='dijit/Menu'>
-                <!--<span data-dojo-type='dijit/MenuItem' id='mnCnPopRun' label='Population: Run'></span>-->
                 <span data-dojo-type='dijit/MenuItem' id='mnCnRun' label='Run'></span>
                 <span data-dojo-type='dijit/MenuItem' id='mnCnPause' label='Pause'></span>
                 <span data-dojo-type='dijit/MenuItem' id='mnCnOne' label='Forward (Do one update)'></span>
@@ -132,7 +132,7 @@
 
               </span>
             </span>
-            <span data-dojo-type='dijit/PopupMenuBarItem' label='Debug' id='mnDebug'> <!--visible/hidden-->
+            <span data-dojo-type='dijit/PopupMenuBarItem' label='Debug' id='mnDebug'> 
               <span data-dojo-type='dijit/Menu'>
                 <span data-dojo-type='dijit/MenuItem' id='mnDbDadsOnly' label='Show Parents only on ritYaxis on PopChart'></span>
                 <span data-dojo-type='dijit/MenuItem' id='mnDbThrowError' label='Throw Error'></span>
@@ -141,6 +141,93 @@
               </span>
             </span>
           </span>     
+          <!-- <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="NavbarSupportedContent">
+              <ul class="navbar-nav mr-auto" style="border: 3px solid #AAA9A9">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown" href="#" id="mnAvidaEd" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                    Avida-ED
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" id="mnAeAbout" onclick='av.ui.aboutAvidaED("mnAeAbout")'>About</a>
+                    <a class="dropdown-item disabled" href="#" id="mnAePreferences">Preferences</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown" href="#" id="mnFile" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                    File
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" id="mnFlSaveWorkspace">Save Current Workspace</a>
+                    <a class="dropdown-item" href="#" id="mnFlSaveAs">Save Workspace As</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" id="mnFlOpenDefaultWS">Open Default Workspace</a>
+                    <a class="dropdown-item" href="#" id="mnFlOpenWS">Open Workspace</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" id="mnFlFzItem">Import Freezer Item</a>
+                    <a class="dropdown-item" href="#" id="mnFlExportData">Export Data</a>
+                    <a class="dropdown-item" href="#" id="mnFlExportGraph">Export Graphics</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" id="mnFlStandAloneApp">Stand Alone Application</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown" href="#" id="mnFreezer" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                    Freezer
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" id="mnFzConfig">Save Current Configuration to Freezer</a>
+                    <a class="dropdown-item" href="#" id="mnFzPopulation">Save Current Population to Freezer</a>
+                    <a class="dropdown-item" href="#" id="mnFzOrganism">Save Selected Organism to Freezer</a>
+                    <a class="dropdown-item" href="#" id="mnFzOffspring">Save Offspring Organism to Freezer</a>
+                    <div class="dropdown-divider"></div>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" id="mnFzAddFzItem">Add Highlighted Freezer Item in Experiment</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#" id="mnFzAddGenomeView">Put Highlighted Organism from Freezer in Organism View</a>
+                    <a class="dropdown-item" href="#" id="mnFzAddPopAnalysis">Put Highlighted Populated Dish from Freezer in Analysis</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown" href="#" id="mnControl" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                    Control
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" id="mnCnRun">Run</a>
+                    <a class="dropdown-item disabled" href="#" id="mnCnPause">Pause</a>
+                    <a class="dropdown-item" href="#" id="mnCnOne">Forward (Do one update)</a>
+                    <a class="dropdown-item" href="#" id="mnCnNewpop">Start New Experiment</a>
+                    <a class="dropdown-item disabled" href="#" id="mnCnOrganismTrace">Put Selected Organism in Organism View</a>
+                    <a class="dropdown-item disabled" href="#" id="mnCnOffspringTrace">Put Offspring in Organism View</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown" href="#" id="mnHelp" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                    Help
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" id="mnHpAbout">About</a>
+                    <a class="dropdown-item" href="images/Avida-ED_UserManualv3.0.pdf" style="color: blue" id="mnHpManual">Quick Start Manual</a>
+                    <a class="dropdown-item" href="cpu_tour.html" style="color: blue" id="mnHpHardware">Ancestor and Hardware</a>
+                    <a class="dropdown-item" href="#" style="color: blue" id="mnHpInfo">Avida-ED Home Page</a>
+                    <a class="dropdown-item disabled" href="short_cuts.html" style="color: blue" id="mnHpShortCuts">Short Cuts</a>
+                    <a class="dropdown-item disabled" href="av.ui.feedback('feedback')" id="mnHpFeedback">Send Feedback (please)</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown" href="#" id="mnHpDebug" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+                    Debug
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#" id="mnHpColorGradient">Show Parents only on ritYaxis on PopChart</a>
+                    <a class="dropdown-item" href="#" id="mnViridis">Throw Error</a>
+                    <a class="dropdown-item" href="#" id="mnCubehelix">Send Data to console</a>
+                    <a class="dropdown-item" href="#" id="mnGnuplot2">Add Line to Session Log</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav> -->
         </div>  <span id='mainMenu_end' class='display_none'></span>
 
         <div id="headerMsg">
@@ -2220,6 +2307,10 @@
         </div>
       </div>
     </div><span class='notSeen' id='o________________________________________________________end_saveCSVdataModalID___'></span>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 
     <!-- yemi: import jQuery: -->
     <!-- diane noted that separate jquery scource for dragulaDnd.js because, -->
