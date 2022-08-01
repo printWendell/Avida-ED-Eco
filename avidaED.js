@@ -226,6 +226,8 @@ require([
   "mouse.js",
   "mouseDown.js",
   "environment2UI.js",
+  "environmentWrite.js",
+  "environmentRead.js",
   "sugar_ui.js",
   "reSizePageParts.js",
   //'restartAvida.js',
