@@ -1,6 +1,6 @@
 // this version uses grid box layout for major sections (toop, left side, main, right side)
 // if (av.dbg.flg.root) { console.log('Root: avidaED.js at beginning of file on 2020_0111 @ 20:21'); };
-console.log("Root: avidaED.js at beginning of file on 2021_a31_Sun");
+console.log("Root: avidaED.js at beginning of file on 2022_804_Thur");
 
 // need a server to run Avida-ED from a file. The one below works.
 // python -m SimpleHTTPServer
@@ -212,6 +212,7 @@ require([
   //'lib/FileSaver_v1.1_date-2016_0328.js',
   //'lib/FileSaver-2.0.3/FileSaver.min.js',
   "lib/FileSaver.min.2.0.4.js",
+  "lib/dojo-release-1.16.4/dijit/_MenuBase.js",
   //'lib/FileSaver.js',
   //'avida-messages.js',
   "messaging.js",
@@ -651,7 +652,7 @@ require([
     //Until we get sending data to database figure out. Switch between post and e-mail session log
     if (false) {
       console.log("sendLogModalID=", document.getElementById("sendLogModalID"));
-      //Need to be able to get rid of these three lines for postPost. will crash without them now.
+      //Need to be able to get rid of these three lines for postLogmodalBigID. will crash without them now.
       document.getElementById("sendLogModalID").style.display = "block"; //textarea must be visable first
       av.dom.sendLogScrollBox.focus(); //must not be commented out or extra error
       document.getElementById("sendLogModalID").style.display = "none"; //sendLogDialog.hide();
@@ -712,49 +713,48 @@ require([
   //http://www.technicaladvices.com/2012/03/26/detecting-the-page-leave-event-in-javascript/
   //Cannot get custom message in Firefox (or Safari for now)
 
-  on(document.getElementById("postPost"), "click", function () {
-    console.log("in on(document.getElementById(postPost)");
-    av.post.addUser("Button: postPost");
-    //Data to send
-    av.debug.postData.email = av.dom.postEmailInput.value;
-    av.debug.postData.comment = av.dom.postComment.value;
-    console.log("postData=", av.debug.postData);
-
-    av.dom.postStatus.textContent = "Sending";
-    av.dom.postProblemError.textContent = "";
-
-    //domConst.place('<p>sending message</p>', 'postStatus');
-    var hostname = "https://avida-ed.msu.edu/developer/report/receive";
-
-    xhr
-      .post(
-        //Post is a helper function to xhr, a more generic class
-        hostname, //URL parameter
-        {
-          //Data and halding parameter
-          data: dojo.toJson(av.debug.postData),
-          headers: { "X-Requested-With": null },
-        }
-      )
-      .then(
-        function (received) {
-          //Promise format; received data from request (first param of then)
-          av.dom.postStatus.textContent = "Received";
-          //domConst.place('<p>Data received: <code>' + JSON.stringify(received) + '</code></p>', 'postStatus');
-        },
-        function (err) {
-          //Error handling (second param of then)
-          av.dom.postStatus.textContent = "Error";
-          av.dom.postProblemError.textContent =
-            "Please send an e-mail to " +
-            av.fio.mailAddress +
-            " about the error sending a Problem Report";
-          av.dom.postProblemError.style.color = "red";
-
-          //domConst.place('<p>Error: <code>' + JSON.stringify(err) + '</code></p>', 'postStatus');
-        }
-      ); // End then
-  }); // End on's function and on statement
+  document.getElementById("postLogmodalBigID").onclick = function () {
+    console.log("Post to DB not implemented");
+  };
+  //on(document.getElementById("postLogmodalBigID"), "click", function () {
+  // console.log("in on(document.getElementById(postLogmodalBigID)");
+  // av.post.addUser("Button: postLogmodalBigID");
+  // //Data to send
+  // av.debug.postData.email = av.dom.postEmailInput.value;
+  // av.debug.postData.comment = av.dom.postComment.value;
+  // console.log("postData=", av.debug.postData);
+  // av.dom.postStatus.textContent = "Sending";
+  // av.dom.postProblemError.textContent = "";
+  // //domConst.place('<p>sending message</p>', 'postStatus');
+  // var hostname = "https://avida-ed.msu.edu/developer/report/receive";
+  // xhr
+  //   .post(
+  //     //Post is a helper function to xhr, a more generic class
+  //     hostname, //URL parameter
+  //     {
+  //       //Data and halding parameter
+  //       data: dojo.toJson(av.debug.postData),
+  //       headers: { "X-Requested-With": null },
+  //     }
+  //   )
+  //   .then(
+  //     function (received) {
+  //       //Promise format; received data from request (first param of then)
+  //       av.dom.postStatus.textContent = "Received";
+  //       //domConst.place('<p>Data received: <code>' + JSON.stringify(received) + '</code></p>', 'postStatus');
+  //     },
+  //     function (err) {
+  //       //Error handling (second param of then)
+  //       av.dom.postStatus.textContent = "Error";
+  //       av.dom.postProblemError.textContent =
+  //         "Please send an e-mail to " +
+  //         av.fio.mailAddress +
+  //         " about the error sending a Problem Report";
+  //       av.dom.postProblemError.style.color = "red";
+  //       //domConst.place('<p>Error: <code>' + JSON.stringify(err) + '</code></p>', 'postStatus');
+  //     }
+  //   ); // End then
+  // End on's function and on statement
 
   //http://stackoverflow.com/questions/7080269/javascript-before-leaving-the-page
   av.ui.sendLogEmailFn = function () {

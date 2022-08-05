@@ -1320,8 +1320,9 @@
     </div><span id='o____________________________________________________________________________end_exampleModalID___'></span>
     
     <span class='notSeen' id='o_____________________________________________________Save_mnFlExportGraph_Dialog_box___'></span>
-    <div  class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='mnFlExportGraphDialog'
-          title='Expoert Graphics has not been implemented - for now:'>
+    <!-- dijit code -->
+    <!-- <div  class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='mnFlExportGraphDialog'
+          title='Export Graphics has not been implemented - for now:'>
       <div class='dijitDialogPaneContentArea'>
         <h3>For Mac users</h3>
         <p>Press the combination [command][shift][4] and use your cursor to select the part of the screen desired.
@@ -1340,7 +1341,7 @@
                 data-dojo-props='onClick:function(){mnFlExportGraphDialog.hide();}'>Close Dialog
         </button>
       </div>
-    </div>
+    </div> -->
 
     <span class='notSeen' id='o_______________________________________________________Export_Stand_Alone_Dialog_box___'></span>
     <div class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='mnFlStandAloneAppDialog'
@@ -1366,7 +1367,8 @@
     </div>
 
     <span class='notSeen' id='o_____________________need_to_Delete_______________________________Freezer_Dialog_box___'></span>
-    <div id='fzDialog' class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='fzDialog' 
+    <!-- need to be deleted -->
+    <!-- <div id='fzDialog' class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='fzDialog' 
          title='What would you like to save to the freezer?'>
       <div class='dijitDialogPaneContentArea'>
         <p>Configuration saves the experiment settings only.</p>
@@ -1382,7 +1384,7 @@
         </span>
         <button data-dojo-type='dijit/form/Button' type='button' id='FzPopulationButton'>Population</button>
       </div>
-    </div>
+    </div> -->
 
     <span class='notSeen' id='o_______________________________________________________________________example_Modal___'></span>
     <div id='fzDialogModalID' class='modal'>
@@ -1447,7 +1449,7 @@
     </div><span class='notSeen' id='o____________________________________________________________end_newDishModalID___'></span>
 
     <span id='-This-is-the-dojo-version._The-nonDojo-version-uses-class=modal_____________________New_button_Dialog___'></span>
-    <div  data-dojo-type='dijit/Dialog' data-dojo-id='newDialogOld' id="newDialogID"
+    <!-- <div  data-dojo-type='dijit/Dialog' data-dojo-id='newDialogOld' id="newDialogID"
           title='Would you like to save or discard the current petri dish before starting a new experiment?'>
       <div class='dijitDialogPaneContentArea'>
         <p>Configured Dish saves the experiment settings only.</p>
@@ -1464,7 +1466,7 @@
         <button data-dojo-type='dijit/form/Button' type='button' id='newSaveConfig'>Save Configured Dish</button>
         <button data-dojo-type='dijit/form/Button' type='button' id='newSaveWorld'>Save Populated Dish</button>
       </div>
-    </div>
+    </div> -->
 
     <span class='notSeen' id='o_________________________________________________________________Need_Ancestor_Modal___'></span>
     <div class="modal" id='needAncestorModalID'>
@@ -1534,10 +1536,10 @@
       </div>
     </div>
     
-    
+    <!-- possible changes include removing data-dojo - tests needed -->
     <span class='notSeen' id='o________Delete_after_postLogModalID_works_______Send_Log_Data_by_posting_to_database___'></span>
     <span class='notSeen' id='o____________________________________Saving_session_log_when_no_e_mail_client present___'></span>
-    <div class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='postLogDialog'
+    <!-- <div class='notSeen' id='postLogDialog'
          title='Avida-ED Problem Report - Help us make Avida-ED better'>
       <div class='dijitDialogPaneContentArea'>
         <div>
@@ -1575,7 +1577,7 @@
 
       </div>
       <div class='dijitDialogPaneActionBar'></div>
-    </div>
+    </div> -->
     
     <span class='notSeen' id='o______________________________to_replace_postLogDialog_____________postLogmodalBigID___'></span>
     <div id='postLogmodalBigID' class='modalBig'>
@@ -1652,10 +1654,10 @@
             <br />
           </div>
           <div id='sendLogCommentAreaHldr'>
-            <textarea id='CommentAreaScrollBox' cols='80' rows='10'>Describe what what you were doing and what happened here:</textarea>
+            <textarea id='CommentAreaScrollBox' cols='80' rows='5'>Describe what what you were doing and what happened here:</textarea>
           </div>
           <div id='sendLogTxtAreaHldr'>
-            <textarea id='sendLogScrollBox' cols='80' rows='10'></textarea>
+            <textarea id='sendLogScrollBox' cols='80' rows='5'></textarea>
           </div>
         </div>
       </div>
