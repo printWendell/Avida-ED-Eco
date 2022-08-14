@@ -163,6 +163,7 @@
         background: #f7f7f7;
         position: relative;
         transition: all 3s ease-in-out;
+        margin: 6px 6px 6px 6px;
       }
 
       .dropdown-divider {
