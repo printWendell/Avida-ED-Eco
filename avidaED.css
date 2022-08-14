@@ -72,13 +72,13 @@ button {
 
 /* Yemi made */
 button:hover {
-  background-color: #c3e0f7;
-  opacity: 50%;
+  background-color: #BBDDFE;
+  opacity: 90%;
 }
 
 /* Yemi made */
 input[type='button']:hover {
-  opacity: 50%;
+  opacity: 90%;
 }
 
 input[type='button'] {
@@ -87,7 +87,7 @@ input[type='button'] {
 }
 
 .item:hover {
-  background-color: #afd9fa;
+  background-color: #BBDDFE;
   opacity: 50%;
 }
 
