@@ -1258,27 +1258,13 @@
     <!-------------- Begin_making_Dialog_or_Model_Boxes -------------->
 
     <!-------------------- Save_WSfile_Dialog_box -------------->
-    <!-- ======original======= -->
-    <!-- <div  class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='sWSfDialog' title='The freezer has changed since last saved in a workspace'>
-      <div class='dijitDialogPaneContentArea'>
-        <p>Would you like to save before loading another workspace?</p>
-      </div>
-      <div class='dijitDialogPaneActionBar'>
-        <button data-dojo-type='dijit/form/Button' type='button' data-dojo-props='onClick:function(){sWSfDialog.hide();}'
-                id='sWSfCancel'>Cancel loading workspace
-        </button>
-        <button data-dojo-type='dijit/form/Button' type='button' id='sWSfSave'>Save current workspace</button>
-        <button data-dojo-type='dijit/form/Button' type='button' id='sWSfOpen'>Open workspace</button>
-      </div>
-    </div><span class='notSeen' id='end_sWSfDialog'></span> -->
+
     <div  class='notSeen modal' id='sWSfDialog' title='The freezer has changed since last saved in a workspace'>
-      <div class='dijitDialogPaneContentArea'>
+      <div class='DialogPaneContentArea'>
         <p>Would you like to save before loading another workspace?</p>
       </div>
-      <div class='dijitDialogPaneActionBar'>
-        <button class='Button' type='button' data-dojo-props='onClick:function(){sWSfDialog.hide();}'
-                id='sWSfCancel'>Cancel loading workspace
-        </button>
+      <div class='DialogPanePaneActionBar'>
+        <button class="Button" type="button" onclick="sWSfDialog.hide();" id="sWSfCancel">Cancel loading workspace</button>
         <button class='Button' type='button' id='sWSfSave'>Save current workspace</button>
         <button class='Button' type='button' id='sWSfOpen'>Open workspace</button>
       </div>
@@ -1312,34 +1298,11 @@
       </div>
     </div>
     <!-------------------- end_exampleModalID -------------------->
-    
-    <!-------------------- Save_mnFlExportGraph_Dialog_box -------------->
-    <div  class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='mnFlExportGraphDialog'
-          title='Expoert Graphics has not been implemented - for now:'>
-      <div class='dijitDialogPaneContentArea'>
-        <h3>For Mac users</h3>
-        <p>Press the combination [command][shift][4] and use your cursor to select the part of the screen desired.
-          A png file will be saved to the desktop with a name of the form: <br />
-          Screen Shot 2020-10-11 at 3.34.36 PM.png
-        </p>
-        <h3>For PC users</h3>
-        <p>
-          Use Snipping Tool: It is in the Accessories Folder or you can Type "Snip" in the 'search programs and files'
-          field once your hit the 'start button'. Hold and drag the cursor around the area you want to capture. SnippingTool
-          will then allow you to save as a png, gif, jpg or single file html.
-        </p>
-      </div>
-      <div class='dijitDialogPaneActionBar'>
-        <button data-dojo-type='dijit/form/Button' type='button'  id='mnFlExportGraphCancel'
-                data-dojo-props='onClick:function(){mnFlExportGraphDialog.hide();}'>Close Dialog
-        </button>
-      </div>
-    </div>
 
     <!-------------------- Export_Stand_Alone_Dialog_box -------------------->
     <div class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='mnFlStandAloneAppDialog'
          title='Stand alone version of Avida-ED 4.0.16 Beta Testing'>
-      <div class='dijitDialogPaneContentArea'>
+      <div class='DialogPaneContentArea'>
         <h3>For working where there is no internet access: No working Avida-ED 4 versions for off-line use at this time.  </h3>
         <ul>
           <li class="slim"><a href="pkgs/Avida-ED-Web-PC_2016_0918.exe" target='_blank'>Avida-ED Windows installer for self-hosted version 2016_0918</a></li>
@@ -1352,32 +1315,14 @@
           </li>
         </ul>
       </div>
-      <div class='dijitDialogPaneActionBar'>
+      <div class='DialogPanePaneActionBar'>
         <button data-dojo-type='dijit/form/Button' type='button'  id='mnFlStandAloneAppDialogCancel'
                 data-dojo-props='onClick:function(){mnFlStandAloneAppDialog.hide();}'>Close Dialog
         </button>
       </div>
     </div>
 
-    <!-------------- need_to_Delete------------------Freezer_Dialog_box -------------->
-    
-    <!-- <div id='fzDialog' class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='fzDialog' 
-         title='What would you like to save to the freezer?'>
-      <div class='dijitDialogPaneContentArea'>
-        <p>Configuration saves the experiment settings only.</p>
-        <p>Population saves organisms and experiment history.</p>
-      </div>
-      <div class='dijitDialogPaneActionBar'>
-        <button data-dojo-type='dijit/form/Button' type='button' data-dojo-props='onClick:function(){fzDialog.hide();}'
-                id='FzCancel'>Cancel
-        </button>
-        <button data-dojo-type='dijit/form/Button' type='button' id='FzConfigurationButton'>Configuration</button>
-        <span id='FzOrganismSpan'>
-          <button data-dojo-type='dijit/form/Button' type='button' id='FzOrganismButton'>Organism</button>
-        </span>
-        <button data-dojo-type='dijit/form/Button' type='button' id='FzPopulationButton'>Population</button>
-      </div>
-    </div> -->
+    <!----------------------Freezer_Dialog_box -------------->
 
     <!-------------------- example_Modal -------------------->
     <div id='fzDialogModalID' class='modal'>
@@ -1401,27 +1346,6 @@
       </div>
     </div>
     <!-------------------- end_exampleModalID -------------------->
-
-    <!-- example_Modal -->
-    <!-- <div id='exampleModalID' class='modal'> -->
-      <!-- Modal content -->
-      <!-- <div class="modal-content" >
-        <div class="modal-header">
-          <h2>Example Model </h2>
-        </div>
-        <div class="modal-body">
-          <p>Configured Dish saves the experiment settings only.</p>
-          <p>Populated Dish saves organisms and experiment history.</p>
-        </div>
-        <div class="modal-footer">
-          <button id='exampleModCancel'>Cancel</button>
-          <button id='exampleModDiscard'>Discard</button>
-          <button id='exampleModSaveConfig'>Save Configured Dish</button>
-          <button id='exampleModSaveWorld'>Save Populated Dish</button>
-        </div>
-      </div>
-    </div><span id='o____________________________________________________________________________end_exampleModalID___'></span> -->
-
     <!-------------------- newDishModalID -------------------------------------->
     <div id='newDishModalID' class='modal'>
       <!-- Modal content -->
@@ -1443,25 +1367,6 @@
     </div>
     <!-------------------- end_newDishModalID -------------------->
 
-    <!-- This-is-the-dojo-version._The-nonDojo-version-uses-class=modal_____________________New_button_Dialog___ -->
-    <!-- <div  data-dojo-type='dijit/Dialog' data-dojo-id='newDialogOld' id="newDialogID"
-          title='Would you like to save or discard the current petri dish before starting a new experiment?'>
-      <div class='dijitDialogPaneContentArea'>
-        <p>Configured Dish saves the experiment settings only.</p>
-        <p>Populated Dish saves organisms and experiment history.</p>
-      </div>
-      <div class='dijitDialogPaneActionBar'>
-        <button data-dojo-type='dijit/form/Button' id='newCancel' type='button' 
-                data-dojo-props="onClick:function() {
-                newDialog.hide(); 
-                dijit.byId('newDialog').set('style', 'display: none;');}"
-                >Cancel
-        </button>
-        <button data-dojo-type='dijit/form/Button' type='button' id='newDiscard'>Discard</button>
-        <button data-dojo-type='dijit/form/Button' type='button' id='newSaveConfig'>Save Configured Dish</button>
-        <button data-dojo-type='dijit/form/Button' type='button' id='newSaveWorld'>Save Populated Dish</button>
-      </div>
-    </div> -->
 
     <!-------------------- Need_Ancestor_Modal -------------------------------------->
     <div class="modal" id='needAncestorModalID'>
@@ -1534,7 +1439,7 @@
     <!-- Saving_session_log_when_no_e_mail_client present -->
     <div class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='postLogDialog'
          title='Avida-ED Problem Report - Help us make Avida-ED better'>
-      <div class='dijitDialogPaneContentArea'>
+      <div class='DialogPaneContentArea'>
         <div>
           <div class='lftWide'>
             <p id='postLogPara'>
@@ -1569,57 +1474,10 @@
         <textarea id='postdTailTextarea' cols='90' rows='20' ></textarea>
 
       </div>
-      <div class='dijitDialogPaneActionBar'></div>
+      <div class='DialogPanePaneActionBar'></div>
     </div>
     
-    <!-------------------- to_replace_postLogDialog_____________postLogmodalBigID -->
-    <!-- <div id='postLogmodalBigID' class='modalBig'>
-      modalBig content
-      <div class="modalBig-content">
-        <div class="modalBig-header">
-          <h1 id='postLogTitle'>Avida-ED Problem Report - Help us make Avida-ED better</h1>
-        </div>
-        <div class="modalBig-body">
-          <div>
-            <div class='lftWide'>
-              <p id='postLogPara'>
-                Please send the data below to Help us make Avida-ED better by clicking on the [Send] button.&nbsp;
-              </p>
-              <br />
-              <label id='postEmailLabel'>Please include your e-mail so we can discuss your problem or suggestion further.</label><br />
-              <input type='text' id='postEmailInput' style='width: 40em' />
-            </div>
-            <div class='ritThin'>
-              <button class='Button' id='postLogModalPost'>Send</button>
-              <br />
-              <label id='postStatus'></label>&nbsp;
-              <br />
-              <button id='postLogModalCancel'>Cancel</button>
-            </div>
-          </div>
-          <br /><br /><br /><br />
-          <label id='postProblemError' style='color: red'></label><br />
-          <br />
-          <label id='postNoteLabel'>Please describe the problem or suggestion in the comment field below.</label><br />
-          <textarea id='postComment' cols='90' rows='5'></textarea><br />
-          Version: <label id='postVersionLabel'></label>
-          Screen size: <label id='postScreenSize'></label><br />
-          User Info: <label id='postUserInfoLabel'></label><br />
-          <label id='postError' stype='color: red'></label><br />
-          Session Log:<br />
-          <textarea id='postLogTextarea' cols='90' rows='20' ></textarea><br /><br />
-          Debug Details:<br />
-        <textarea id='postdTailTextarea' cols='90' rows='20' ></textarea>
-        </div>
-        <div class="modalBig-footer">
-          <button id='oldDishCancel'>Cancel</button>
-          <button id='oldDishDiscard'>Discard</button>
-          <button id='oldDishSaveConfig'>Save Configured Dish</button>
-          <button id='oldDishSaveWorld'>Save Populated Dish</button>
-        </div>
-      </div>
-    </div> -->
-    <!-------------------- end_postLogModalID -------------------->
+    
     <!-------------------- Send_Log_Data_via_e-mail_client_modal -->
 
     <div id='sendLogModalID' class='modalBig'>
@@ -2068,11 +1926,11 @@
     <!------------ Restart_Avida_with_in_same_browser_Session__Does_NOT_work ------------>
     <div class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='restartAvidaDialog'
          title='There has been a fatal error in Avida'>
-      <div class='dijitDialogPaneContentArea'>
+      <div class='DialogPaneContentArea'>
         <p>Would you like to save or discard the current petri dish configuration before restarting Avida?</p>
         <label id='restartMsgLabel' />
       </div>
-      <div class='dijitDialogPaneActionBar'>
+      <div class='DialogPanePaneActionBar'>
         <button id='restartAvidaFrzConfig'>Freeze configuration</button>
         <button id='restartAvidaNow'>Restart Avida (maintains current workspace)</button>
       </div>
@@ -2095,10 +1953,10 @@
     <!------------ delete_when_SaveCSVfileModal_works_______Save_time_recorder_data_to_a_csv_file -->
     <!-- <div class='notSeen' data-dojo-type='dijit/Dialog' data-dojo-id='saveCSVdialog'
          title='write a file'>
-      <div class='dijitDialogPaneContentArea'>
+      <div class='DialogPaneContentArea'>
         The file name will be 'unknown' in safari
       </div>
-      <div class='dijitDialogPaneActionBar'>
+      <div class='DialogPanePaneActionBar'>
         <button data-dojo-type='dijit/form/Button' type='button' data-dojo-props='onClick:function(){ab.hide();}'
                 id='saveCSVdialogCancel'>Cancel
         </button>

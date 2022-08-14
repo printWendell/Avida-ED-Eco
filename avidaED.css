@@ -63,10 +63,10 @@ html, body {
 
 /* diane's version  */
 button {
-   border: 1px solid #aaa;
+   /* border: 1px solid #aaa; */
    display:inline;
    cursor:pointer;
-   border-radius: 5px;
+   /* border-radius: 5px; */
  }
  
 
@@ -79,6 +79,11 @@ button:hover {
 /* Yemi made */
 input[type='button']:hover {
   opacity: 50%;
+}
+
+input[type='button'] {
+  border: 1px solid #aaa;
+  border-radius: 5px;
 }
 
 .item:hover {

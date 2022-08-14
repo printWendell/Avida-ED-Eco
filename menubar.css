@@ -171,3 +171,14 @@
         overflow: hidden;
         border-top: 1px solid rgba(0, 0, 0, 0.15);
       }
+
+      .DialogPaneContentArea {
+  
+        margin: -10px -8px;
+        padding: 10px 8px;
+      }
+
+      .DialogPaneActionBar {
+        text-align: left;
+        padding: 3px 7px 2px 5px;
+      }
